@@ -107,7 +107,6 @@ section {
 }
 
 .gallery__item {
-  outline: 1px #212121;
   flex-basis: calc((100% - var(--gap) * (var(--items) - 1)) / var(--items));
 }
 
@@ -116,7 +115,6 @@ section {
   transition: transform var(--animation-duration) var(--timing-function),
     box-shadow var(--animation-duration) var(--timing-function);
   text-decoration: none;
-  border-radius: 4px;
 }
 
 .gallery__image {
@@ -124,6 +122,8 @@ section {
   width: 100%;
   object-fit: cover;
   transition: transform var(--animation-duration) var(--timing-function);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .gallery__link:hover,
