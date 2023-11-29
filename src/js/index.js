@@ -117,6 +117,15 @@ function handlerLoadMore(entries) {
         createGalleryMarkup(hits);
         lightbox.refresh();
 
+        const { height: cardHeight } = document
+          .querySelector('.gallery')
+          .firstElementChild.getBoundingClientRect();
+
+        window.scrollBy({
+          top: cardHeight * 2,
+          behavior: 'smooth',
+        });
+
         if (page >= totalPages) {
           observer.unobserve(guard);
           finishMessage.classList.remove('is-hidden');
