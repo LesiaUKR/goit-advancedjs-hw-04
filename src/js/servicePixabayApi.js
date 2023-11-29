@@ -11,7 +11,7 @@ async function servicePixabay(searchQuery, page, perpage) {
     orientation: 'horizontal',
     safesearch: 'true',
     page,
-    perpage,
+    per_page: perpage,
   });
 
   const response = await axios.get(`${BASE_URL}?${params}`);
